@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #191c32; /* Color azul */
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #191c32; /* Color azul */
+  }
+  
+  .navbar .brand h2 {
+    color: #fff;
+  }
+  
+  .navbar .brand span {
+    color: aqua;
+  }
+  
+  .navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .menu li {
+    position: relative;
+  }
+  
+  .navbar .menu li a {
+    color: #fff;
+    padding: 10px 15px;
+  }
+  
+  .navbar .menu li a.active,
+  .navbar .menu li a:hover {
+    background-color: aqua;
+    color: #191c32; /* Color azul */
+  }
+  
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .info-content h1 {
+    font-size: 3em;
+  }
+  
+  .info-content h1 span {
+    color: aqua;
+  }
+  
+  .download-cv {
+    background-color: aqua;
+    color: #191c32; /* Color azul */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .about {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .about img {
+    max-width: 50%;
+  }
+  
+  .about-info {
+    padding: 20px;
+  }
+  
+  .about-info h2 {
+    font-size: 2em;
+    color: #191c32; /* Color azul */
+  }
+  
+  .about-info .divider {
+    width: 50px;
+    height: 5px;
+    background-color: aqua;
+    margin: 10px 0;
+  }
+  
+  .about-info .about-text {
+    color: #191c32; /* Color azul */
+  }
+  
+  .about-info .about-text.expanded {
+    max-height: none;
+  }
+  
+  .about-info .read-more-btn {
+    background-color: aqua;
+    color: #191c32; /* Color azul */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .portfolio {
+    padding: 20px;
+  }
+  
+  .portfolio-heading h2 {
+    font-size: 2em;
+    color: #191c32; /* Color azul */
+  }
+  
+  .portfolio-heading .divider {
+    width: 50px;
+    height: 5px;
+    background-color: aqua;
+    margin: 10px 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 30%;
+    text-align: center;
+  }
+  
+  .card__title h2 {
+    font-size: 1.5em;
+    color: #191c32; /* Color azul */
+  }
+  
+  .card__proyect-links a {
+    color: aqua;
+    font-size: 1.2em;
+    margin: 10px;
+  }
+  
+  .button-content {
+    padding: 10px;
+  }
+  
+  .contact-section {
+    padding: 20px;
+  }
+  
+  .contact-heading h2 {
+    font-size: 2em;
+    color: #191c32; /* Color azul
+  
