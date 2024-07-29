@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Desarrolla una calculadora sencilla que pueda realizar sumas, restas, multiplicaciones y divisiones
+
+// Solicitamos al usuario los dos números
+let num1 = parseFloat(prompt("Introduce el primer número:"));
+let num2 = parseFloat(prompt("Introduce el segundo número:"));
+
+// Solicitamos al usuario la operación a realizar
+let operacion = prompt("Introduce la operación (+, -, *, /):");
+
+// Declaramos una variable para almacenar el resultado
+let resultado;
+
+if (operacion === "+") {
+  resultado = num1 + num2;
+} else if (operacion === "-") {
+  resultado = num1 - num2;
+} else if (operacion === "*") {
+  resultado = num1 * num2;
+} else if (operacion === "/") {
+  resultado = num1 / num2;
+} else {
+  alert("Operación no válida");
+}
+
+// Mostramos el resultado
+alert("El resultado es: " + resultado);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Desarrolla un programa que determine el costo total de un viaje
+    // Solicitamos al usuario que introduzca los costos estimados para cada categoría
+
+    // Pedimos el costo de alojamiento
+    let alojamiento = parseFloat(prompt("Introduce el costo de alojamiento:"));
+    // Pedimos el costo de comida
+    let comida = parseFloat(prompt("Introduce el costo de comida:"));
+    // Pedimos el costo de entretenimiento
+    let entretenimiento = parseFloat(prompt("Introduce el costo de entretenimiento:"));
+
+    // Calculamos el costo total sumando todos estos gastos
+    let costoTotal = alojamiento + comida + entretenimiento;
+
+    // Mostramos el costo total al usuario
+    alert("El costo total del viaje es " + costoTotal + "€");
+    document.write("El costo total del viaje es " + costoTotal + "€");
+    </script>
+</body>
+</html>

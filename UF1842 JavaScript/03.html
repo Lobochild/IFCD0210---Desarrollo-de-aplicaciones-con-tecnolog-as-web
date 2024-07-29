@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Desarrolla un programa que determine el IMC (Índice de Masa Corporal) de una persona
+    
+    // Solicitamos al usuario que introduzca su peso en kilogramos
+    let peso = parseFloat(prompt("Introduce tu peso en kilogramos:"));
+    // Solicitamos al usuario que introduzca su altura en metros
+    let altura = parseFloat(prompt("Introduce tu altura en metros:"));
+
+    // Calculamos el IMC dividiendo el peso por el cuadrado de la altura
+    let imc = peso / (altura * altura);
+
+    // Mostramos al usuario el IMC calculado
+    alert("Tu IMC es " + imc.toFixed(2));
+    document.write("Tu IMC es " + imc.toFixed(2));
+    </script>
+</body>
+</html>

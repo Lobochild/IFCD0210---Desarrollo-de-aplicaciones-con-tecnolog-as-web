@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*1.Se te da un código HTML, CSS y JavaScript para crear un contenedor que muestra frases aleatorias de un array cuando el usuario hace clic en un botón. Tu tarea es modificar el código JavaScript para que, al presionar el botón con el id 'texto-informatica', aparezca una frase aleatoria del array 'frasesFrikisInformatica' 
+    2.Actualiza el código anterior para que, además de mostrar una frase aleatoria, también cambien de color el texto y el botón de manera aleatoria, utilizando un array de colores que tú definas.*/ 
+
+// Modifica el código JavaScript para que, al presionar el botón con el id 'texto-informatica', aparezca una frase aleatoria del array 'frasesFrikisInformatica'
+// Además, cambia de color el texto y el botón de manera aleatoria
+
+// Array de frases
+let frasesFrikisInformatica = [
+  "Soy un código dentro de un código.",
+  "Realmente, en la vida no hay bugs, solo características.",
+  "Para entender la recursión, primero debes entender la recursión.",
+  "No hay lugar como 127.0.0.1.",
+  "Cualquier problema en informática puede resolverse añadiendo otra capa de abstracción."
+];
+
+// Array de colores
+let colores = ["red", "blue", "green", "purple", "orange"];
+
+// Función para mostrar una frase aleatoria y cambiar el color
+function mostrarFrase() {
+  // Seleccionamos una frase aleatoria
+  let frase = frasesFrikisInformatica[Math.floor(Math.random() * frasesFrikisInformatica.length)];
+  
+  // Seleccionamos un color aleatorio
+  let color = colores[Math.floor(Math.random() * colores.length)];
+
+  // Mostramos la frase y cambiamos el color
+  let contenedor = document.getElementById("contenedor-frase");
+  contenedor.innerText = frase;
+  contenedor.style.color = color;
+  
+  // Cambiamos el color del botón
+  let boton = document.getElementById("texto-informatica");
+  boton.style.backgroundColor = color;
+}
+
+// Asignamos la función al evento de clic del botón
+document.getElementById("texto-informatica").addEventListener("click", mostrarFrase);
+
+    </script>
+</body>
+</html>

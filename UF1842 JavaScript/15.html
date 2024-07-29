@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Mostrar los números del 20 al 30 en la consola
+for (let i = 20; i <= 30; i++) {
+  console.log(i);
+}
+
+// Mostrar los números pares entre 30 y 50 en la consola
+for (let i = 30; i <= 50; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+
+// Determinar la suma de los primeros 50 números naturales
+let suma = 0;
+for (let i = 1; i <= 50; i++) {
+  suma += i;
+}
+console.log("La suma de los primeros 50 números naturales es: " + suma);
+
+// Mostrar la tabla de multiplicar del 8
+for (let i = 1; i <= 10; i++) {
+  console.log(`8 x ${i} = ${8 * i}`);
+}
+
+// Mostrar los elementos de un arreglo
+let arreglo = [1, 2, 3, 4, 5];
+for (let i = 0; i < arreglo.length; i++) {
+  console.log(arreglo[i]);
+}
+
+// Mostrar un patrón de asteriscos en forma de triángulo, con una altura de 9
+let altura = 9;
+for (let i = 1; i <= altura; i++) {
+  let fila = "";
+  for (let j = 0; j < i; j++) {
+    fila += "*";
+  }
+  console.log(fila);
+}
+
+// Determinar la suma de los números pares entre 1 y 50
+let sumaPares = 0;
+for (let i = 1; i <= 50; i++) {
+  if (i % 2 === 0) {
+    sumaPares += i;
+  }
+}
+console.log("La suma de los números pares entre 1 y 50 es: " + sumaPares);
+
+// Mostrar los números del 30 al 20 en orden descendente
+for (let i = 30; i >= 20; i--) {
+  console.log(i);
+}
+
+// Determinar el promedio de un arreglo de números
+let numeros = [10, 20, 30, 40, 50];
+let sumaNumeros = 0;
+for (let i = 0; i < numeros.length; i++) {
+  sumaNumeros += numeros[i];
+}
+let promedio = sumaNumeros / numeros.length;
+console.log("El promedio del arreglo es: " + promedio);
+
+    </script>
+</body>
+</html>

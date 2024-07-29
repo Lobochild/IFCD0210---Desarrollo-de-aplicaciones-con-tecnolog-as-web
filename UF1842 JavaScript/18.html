@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    • Una de las cosas que sorprenden son el sin fin de animaciones que se pueden hacer con JavaScript, por ello se ha recolectado en los siguientes ejercicios una aproximación para trabajar la animación con JavaScript. Se listan a continuación los problemas a resolver.
+    • En un foro de animación de javascript se ha colocado el siguiente desafío, que consiste en: Animar el movimiento de un objeto, se debería de crea un objeto en una página HTML y utilizar JavaScript para moverlo hacia la izquierda, derecha, arriba o abajo. Crea lo propio para resolver este desafío.
+    • En un hackaton dedicado a la animación con javascript se ha publicado un reto, en el que se debe de animar el cambio de tamaño de un objeto, para ello se ha sugerido utilizar JavaScript para animar el cambio de tamaño de un objeto en una página HTML, puede ser aumentando o disminuyendo su tamaño. Crea lo propio para solventar este reto.
+    • Un creador de animaciones se ha topado con una dificultad, la cual consiste en animar el cambio de color de un objeto, ha leído que puede utilizar JavaScript para animar el cambio de color de un objeto en una página HTML, puede que el cambiando sea gradualmente su color de fondo o el color del texto. Crea los archivos pertinentes para ayudar al creador de animaciones.
+    • Fabrixo, ha entrado al mundo de animaciones web y se le ha encomendado una tarea que consiste en, animar la opacidad de un objeto, le han recomendado utilizar JavaScript para animar la opacidad de un objeto en una página HTML, ya sea haciendo que se vuelva más transparente o más opaco. Crea los archivos adecuados para ayudar a Frabixo.
+    • Perry, ha sido contratado por una diseñadora web y le ha encargado crear una animación de desvanecimiento. Le sugirieron utilizar JavaScript para crear una animación en la que un objeto desaparece gradualmente de la pantalla. Crea los archivos que sean necesario para ayudar a Perry.
+    • Mike, ha empezado a hacer su Servicio Social en una empresa que se dedica a la creación de sitios web, tiene la encomienda de crear una animación de rebote, se ha recomendado que utilice JavaScript para crear la animación en la que un objeto rebota de un lado a otro de la pantalla, como una pelota que rebota en una pared. Crea los ficheros necesarios para ayudar a Mike.
+      Estos ejercicios permite acercar al lector a la animación básica con javascript.*/
+
+// Animar el movimiento de un objeto
+function moverObjeto() {
+  let objeto = document.getElementById("objeto");
+  let posicion = 0;
+  let id = setInterval(frame, 10);
+  
+  function frame() {
+    if (posicion == 350) {
+      clearInterval(id);
+    } else {
+      posicion++;
+      objeto.style.top = posicion + "px";
+      objeto.style.left = posicion + "px";
+    }
+  }
+}
+
+// Animar el cambio de tamaño de un objeto
+function cambiarTamanoObjeto() {
+  let objeto = document.getElementById("objeto");
+  let tamano = 100;
+  let id = setInterval(frame, 10);
+  
+  function frame() {
+    if (tamano == 200) {
+      clearInterval(id);
+    } else {
+      tamano++;
+      objeto.style.width = tamano + "px";
+      objeto.style.height = tamano + "px";
+    }
+  }
+}
+
+// Animar el cambio de color de un objeto
+function cambiarColorObjeto() {
+  let objeto = document.getElementById("objeto");
+  let colores = ["red", "blue", "green", "purple", "orange"];
+  let index = 0;
+  let id = setInterval(frame, 1000);
+  
+  function frame() {
+    objeto.style.backgroundColor = colores[index];
+    index = (index + 1) % colores.length;
+  }
+}
+
+// Animar la opacidad de un objeto
+function cambiarOpacidadObjeto() {
+  let objeto = document.getElementById("objeto");
+  let opacidad = 1;
+  let id = setInterval(frame, 100);
+  
+  function frame() {
+    if (opacidad <= 0) {
+      clearInterval(id);
+    } else {
+      opacidad -= 0.1;
+      objeto.style.opacity = opacidad;
+    }
+  }
+}
+
+// Animación de desvanecimiento
+function desvanecerObjeto() {
+  let objeto = document.getElementById("objeto");
+  let opacidad = 1;
+  let id = setInterval(frame, 100);
+  
+  function frame() {
+    if (opacidad <= 0) {
+      clearInterval(id);
+      objeto.style.display = "none";
+    } else {
+      opacidad -= 0.1;
+      objeto.style.opacity = opacidad;
+    }
+  }
+}
+
+// Animación de rebote
+function rebotarObjeto() {
+  let objeto = document.getElementById("objeto");
+  let posicion = 0;
+  let direccion = 1;
+  let id = setInterval(frame, 10);
+  
+  function frame() {
+    if (posicion >= 350 || posicion <= 0) {
+      direccion = -direccion;
+    }
+    posicion += direccion;
+    objeto.style.left = posicion + "px";
+  }
+}
+    </script>
+</body>
+</html>

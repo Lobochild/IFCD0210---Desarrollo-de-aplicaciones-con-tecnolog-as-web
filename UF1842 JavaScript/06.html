@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Siendo el valor de las variables: a = 10 b = 12 c = 13 d = 10
+    Encontrar el valor de verdad de cada una de las siguientes expresiones
+    4. ( ( a > b ) OR ( a < c ) ) AND ( ( a = c) OR ( a >= b ) )SS
+    5. ( ( a >= b ) OR ( a < d ) ) AND ( ( a >= d ) AND (c > d ) )
+    6. NOT ( a = c ) AND ( c > b )*/
+
+    // Siendo el valor de las variables: a = 10, b = 12, c = 13, d = 10
+let a = 10;
+let b = 12;
+let c = 13;
+let d = 10;
+
+// Operación 4
+let operacion4 = ( ( a > b ) || ( a < c ) ) && ( ( a == c ) || ( a >= b ) );
+console.log("Operación 4: ", operacion4); // FALSA
+
+// Operación 5
+let operacion5 = ( ( a >= b ) || ( a < d ) ) && ( ( a >= d ) && ( c > d ) );
+console.log("Operación 5: ", operacion5); // FALSA
+
+// Operación 6
+let operacion6 = !( a == c ) && ( c > b );
+console.log("Operación 6: ", operacion6); // VERDADERA
+    </script>
+</body>
+</html>

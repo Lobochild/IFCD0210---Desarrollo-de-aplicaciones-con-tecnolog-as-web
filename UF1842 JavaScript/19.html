@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Desarrolla un programa que pida al usuario dos números y luego muestre todos los números primos entre esos dos números
+
+// Función para verificar si un número es primo
+function esPrimo(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+// Solicita al usuario que introduzca dos números enteros
+let primerNumero = parseInt(prompt("Introduce el primer número:"));
+let segundoNumero = parseInt(prompt("Introduce el segundo número:"));
+
+// Identifica todos los números primos en el rango definido por los dos números proporcionados, incluyendo ambos extremos
+let numerosPrimos = [];
+for (let i = primerNumero; i <= segundoNumero; i++) {
+  if (esPrimo(i)) {
+    numerosPrimos.push(i);
+  }
+}
+
+// Muestra los números primos encontrados
+alert("Los números primos entre " + primerNumero + " y " + segundoNumero + " son: " + numerosPrimos.join(", "));
+    </script>
+</body>
+</html>

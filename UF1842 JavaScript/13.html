@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Mostrar la serie de Fibonacci hasta el décimo término
+let a = 0;
+let b = 1;
+let siguiente;
+
+console.log(a); // Primer término
+console.log(b); // Segundo término
+
+for (let i = 3; i <= 10; i++) {
+  siguiente = a + b;
+  console.log(siguiente);
+  a = b;
+  b = siguiente;
+}
+    </script>
+</body>
+</html>
